@@ -1,5 +1,5 @@
 package org.oop;
-
+//В данном классе можно исключить конструктор по умолчанию, по принципу DRY
 public class Article {
     public Long id;
     public String title;

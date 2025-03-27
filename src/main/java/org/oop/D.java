@@ -5,7 +5,7 @@ import org.mindrot.jbcrypt.BCrypt;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
-
+//В данном классе необходимо провести работу по корректировке названий методов и соблюдения принципа YAGNI
 public class D {
     public void initializeDatabase() {
         {
@@ -60,6 +60,7 @@ public class D {
         // Возвращает хешированный пароль
         return BCrypt.hashpw(plainTextPassword, BCrypt.gensalt());
     }
+    //Некорретное название метода, по названию необходимо понимать суть метода
     public Article ca(Article article) {
         String query = "INSERT INTO articles (title, content, author_id) VALUES (?, ?, ?)";
         try (Connection connection =  DriverManager.getConnection(
@@ -118,7 +119,7 @@ public class D {
         }
         return null;
     }
-
+    //Некорретное название метода, по названию необходимо понимать суть метода
     public List<Article> ga(String title) {
         List<Article> articles = new ArrayList<>();
         String query = "SELECT id, title, content, author_id FROM articles WHERE title LIKE ?";
@@ -145,7 +146,7 @@ public class D {
         }
         return articles;
     }
-
+    //Некорретное название метода, по названию необходимо понимать суть метода
     public List<Article> ga() {
         List<Article> articles = new ArrayList<>();
         String query = "SELECT id, title, content, author_id FROM articles";

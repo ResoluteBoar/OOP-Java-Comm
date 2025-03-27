@@ -8,7 +8,7 @@ public class User {
     public String password;
     public String email;
     public Role role;
-
+    //Несоблюдение принципа DRY, второй User не будет использоваться
     public User(int id, String username, String password, String email, Role role) {
         this.id = id;
         this.username = username;
